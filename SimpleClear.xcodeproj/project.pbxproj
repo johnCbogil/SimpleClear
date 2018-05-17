@@ -14,6 +14,8 @@
 		9400B99720ADD10F0071401C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9400B99520ADD10F0071401C /* LaunchScreen.storyboard */; };
 		9400B9A220ADD10F0071401C /* SimpleClearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9400B9A120ADD10F0071401C /* SimpleClearTests.swift */; };
 		9400B9AD20ADD10F0071401C /* SimpleClearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9400B9AC20ADD10F0071401C /* SimpleClearUITests.swift */; };
+		9400B9BB20ADD8730071401C /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9400B9BA20ADD8730071401C /* ItemTableViewCell.swift */; };
+		9400B9BD20ADD88D0071401C /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9400B9BC20ADD88D0071401C /* ItemTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		9400B9A820ADD10F0071401C /* SimpleClearUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleClearUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9400B9AC20ADD10F0071401C /* SimpleClearUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleClearUITests.swift; sourceTree = "<group>"; };
 		9400B9AE20ADD10F0071401C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9400B9BA20ADD8730071401C /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemTableViewCell.swift; path = ../../simpleClear/SimpleClear/ItemTableViewCell.swift; sourceTree = "<group>"; };
+		9400B9BC20ADD88D0071401C /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				9400B98C20ADD10E0071401C /* AppDelegate.swift */,
 				9400B98E20ADD10E0071401C /* ViewController.swift */,
+				9400B9BA20ADD8730071401C /* ItemTableViewCell.swift */,
+				9400B9BC20ADD88D0071401C /* ItemTableViewCell.xib */,
 				9400B99020ADD10E0071401C /* Main.storyboard */,
 				9400B99320ADD10F0071401C /* Assets.xcassets */,
 				9400B99520ADD10F0071401C /* LaunchScreen.storyboard */,
@@ -229,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9400B9BD20ADD88D0071401C /* ItemTableViewCell.xib in Resources */,
 				9400B99720ADD10F0071401C /* LaunchScreen.storyboard in Resources */,
 				9400B99420ADD10F0071401C /* Assets.xcassets in Resources */,
 				9400B99220ADD10E0071401C /* Main.storyboard in Resources */,
@@ -257,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9400B98F20ADD10E0071401C /* ViewController.swift in Sources */,
+				9400B9BB20ADD8730071401C /* ItemTableViewCell.swift in Sources */,
 				9400B98D20ADD10E0071401C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
