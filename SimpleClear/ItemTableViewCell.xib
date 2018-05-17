@@ -32,6 +32,9 @@
                     <constraint firstAttribute="bottom" secondItem="rB5-xm-Spq" secondAttribute="bottom" id="zEj-5B-tFG"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="textField" destination="rB5-xm-Spq" id="p1a-nW-UAZ"/>
+            </connections>
             <point key="canvasLocation" x="51" y="11"/>
         </tableViewCell>
     </objects>

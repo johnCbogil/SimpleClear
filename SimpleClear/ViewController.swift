@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddToListDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var listOfItems: [String] = ["a","b","c"]
@@ -20,12 +20,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: itemTableViewCell, bundle: nil), forCellReuseIdentifier: itemTableViewCell)
-        let addBarButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItemToList))
-        self.navigationItem.rightBarButtonItem = addBarButton
-    }
-    
-    @objc func addItemToList() {
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,7 +28,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: itemTableViewCell, for: indexPath) as! ItemTableViewCell
+        cell.addToListDelegate = self
         return cell
     }
+    
+    func addItemToList(item: String) {
+        listOfItems.append(item)
+        print(listOfItems)
+    }
+    
 }
 
