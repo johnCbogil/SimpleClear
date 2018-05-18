@@ -6,6 +6,8 @@
 //  Copyright © 2018 John Bogil. All rights reserved.
 //
 
+// https://www.raywenderlich.com/77975/making-a-gesture-driven-to-do-list-app-like-clear-in-swift-part-2
+
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddToListDelegate {
