@@ -9,17 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddToListDelegate {
-
+    
     @IBOutlet weak var tableView: UITableView!
     var listOfItems: [String] = ["a","b","c"]
     let itemTableViewCell = "ItemTableViewCell"
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureTableView()
+    }
 
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.tableView.register(UINib(nibName: itemTableViewCell, bundle: nil), forCellReuseIdentifier: itemTableViewCell)
+    func configureTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: itemTableViewCell, bundle: nil), forCellReuseIdentifier: itemTableViewCell)
+        tableView.tableFooterView = UIView()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,5 +43,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print(listOfItems)
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y < -100 {
+            print("hello world")
+        }
+    }
 }
-
