@@ -21,18 +21,12 @@ class ItemTableViewCell: UITableViewCell, UITextFieldDelegate {
         super.awakeFromNib()
         self.textField.delegate = self
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         if let item = textField.text {
             addToListDelegate.addItemToList(item: item)
         }
         return true
     }
-
 }
