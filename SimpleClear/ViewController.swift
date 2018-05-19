@@ -16,10 +16,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var listOfItems: [String] = ["a","b","c"]
     let itemTableViewCell = "ItemTableViewCell"
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .black
         configureTableView()
     }
 
@@ -28,6 +28,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
         tableView.register(UINib(nibName: itemTableViewCell, bundle: nil), forCellReuseIdentifier: itemTableViewCell)
         tableView.tableFooterView = UIView()
+        tableView.backgroundColor = .clear
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
