@@ -9,7 +9,7 @@
 import UIKit
 
 protocol AddToListDelegate {
-    func addItemToList(item:String)
+    func addItemToList(item:ToDoItem)
 }
 
 class ItemTableViewCell: UITableViewCell, UITextFieldDelegate {
@@ -29,9 +29,8 @@ class ItemTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        if let item = textField.text {
-            addToListDelegate.addItemToList(item: item)
-        }
+        addToListDelegate.addItemToList(item: toDoItem!)
+        
         return true
     }
 }

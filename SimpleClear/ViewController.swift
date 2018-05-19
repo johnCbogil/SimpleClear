@@ -44,8 +44,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-    func addItemToList(item: String) {
-//        listOfItems.append(item)
+    func addItemToList(item: ToDoItem) {
+        listOfItems.append(item)
         print(listOfItems)
     }
     
