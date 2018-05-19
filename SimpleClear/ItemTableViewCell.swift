@@ -15,6 +15,11 @@ protocol AddToListDelegate {
 class ItemTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     var addToListDelegate: AddToListDelegate!
+    var toDoItem: ToDoItem? {
+        didSet {
+            textField.text = toDoItem!.text
+        }
+    }
 
     @IBOutlet weak var textField: UITextField!
     override func awakeFromNib() {
