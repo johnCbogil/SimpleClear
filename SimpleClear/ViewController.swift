@@ -40,12 +40,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: itemTableViewCell, for: indexPath) as! ItemTableViewCell
         cell.addToListDelegate = self
-        cell.toDoItem = listOfItems[indexPath.row]
+        let item = listOfItems[indexPath.row]
+        cell.toDoItem = item
+        cell.textField?.text = item.text
         return cell
     }
     
     func addItemToList(item: ToDoItem) {
-        listOfItems.append(item)
+//        listOfItems.append(item)
         print(listOfItems)
     }
     
