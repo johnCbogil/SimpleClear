@@ -8,20 +8,9 @@
 
 import UIKit
 
-protocol AddToListDelegate {
-    func addItemToList(item:ToDoItem)
-}
-
 class ItemTableViewCell: UITableViewCell, UITextFieldDelegate {
     
-//    @IBOutlet weak var label: UILabel!
-    
-    var addToListDelegate: AddToListDelegate!
-    var toDoItem: ToDoItem? {
-        didSet {
-//            label.text = toDoItem!.text
-        }
-    }
+    var toDoItem: ToDoItem?
 
     @IBOutlet weak var textField: UITextField!
     override func awakeFromNib() {
@@ -31,12 +20,12 @@ class ItemTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-//        addToListDelegate.addItemToList(item: toDoItem!)
-        // NEED TO FIDN THE MATCHING TODOITEM IN THE LIST AND WRITE THE TEXT TO IT
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.resignFirstResponder()
         toDoItem!.text = textField.text!
 
-        
-        
-        return true
     }
 }
